@@ -5,8 +5,10 @@ import Sidebar from "./componenets/Sidebar";
 function App() {
   return (
     <div className="app">
-      <Sidebar />
-      <Chat />
+      <div className="app_body">
+        <Sidebar />
+        <Chat />
+      </div>
     </div>
   );
 }
