@@ -47,3 +47,9 @@
   /*An outline is a border that appears around an element (outside the border) to indicate that it is selected or focused.
   we get rid of  the blue box that appear on focus*/
 }
+
+.sidebar_chats {
+  flex: 1;
+  background-color: white;
+  overflow: scroll;
+}
