@@ -56,3 +56,34 @@
   margin-left: auto;
   background-color: #dcf8c6;
 }
+
+.chat_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+  border-top: 1px solid lightgray;
+}
+.chat_footer > form {
+  flex: 1;
+  display: flex;
+}
+
+.chat_footer > form > input {
+  flex: 1;
+  border-radius: 30px;
+  padding: 10px;
+  border: none;
+  outline-width: 0;
+}
+
+.chat_footer > form > button {
+  display: none;
+  /* this way we can still use the funcitonality of the button without it being visible.
+  we wanna send the message when enter is pressed. */
+}
+
+.chat_footer > .MuiSvgIcon-root {
+  padding: 10px;
+  color: gray;
+}

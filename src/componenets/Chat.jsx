@@ -1,9 +1,12 @@
-import { Avatar, IconButton } from "@mui/material";
+import { Avatar, Icon, IconButton } from "@mui/material";
 import React from "react";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
 import "./Chat.css";
+import MicIcon from "@mui/icons-material/Mic";
+
 function Chat() {
   return (
     <div className="chat">
@@ -54,6 +57,18 @@ function Chat() {
           This is a message.
           <span className="chat_timestamp">{new Date().toISOString()}</span>
         </p>
+      </div>
+
+      <div className="chat_footer">
+        <IconButton>
+          <SentimentSatisfiedAltIcon />
+        </IconButton>
+
+        <form>
+          <input type="text" placeholder="Type a message" />
+          <button type="submit">Send a message</button>
+        </form>
+        <MicIcon />
       </div>
     </div>
   );
