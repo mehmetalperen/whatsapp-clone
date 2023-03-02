@@ -23,7 +23,6 @@ function App() {
     });
     const channel = pusher.subscribe("messages");
     channel.bind("inserted", (newMsg) => {
-      alert(JSON.stringify(newMsg));
       setMessages([...messages, newMsg]);
     });
 
