@@ -7,7 +7,7 @@ import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt
 import "./Chat.css";
 import MicIcon from "@mui/icons-material/Mic";
 
-function Chat() {
+function Chat({ messages }) {
   return (
     <div className="chat">
       <div className="chat_header">
@@ -32,31 +32,15 @@ function Chat() {
       </div>
 
       <div className="chat_body">
-        <p className="chat_message">
-          <span className="chat_name">Mehmet</span>
-          This is a message.
-          <span className="chat_timestamp">{new Date().toISOString()}</span>
-        </p>
-        <p className="chat_message">
-          <span className="chat_name">Mehmet</span>
-          This is a message.
-          <span className="chat_timestamp">{new Date().toISOString()}</span>
-        </p>
-        <p className="chat_message chat_reciever">
-          <span className="chat_name">Mehmet</span>
-          This is a message.
-          <span className="chat_timestamp">{new Date().toISOString()}</span>
-        </p>
-        <p className="chat_message chat_reciever">
-          <span className="chat_name">Mehmet</span>
-          This is a message.
-          <span className="chat_timestamp">{new Date().toISOString()}</span>
-        </p>
-        <p className="chat_message">
-          <span className="chat_name">Mehmet</span>
-          This is a message.
-          <span className="chat_timestamp">{new Date().toISOString()}</span>
-        </p>
+        {messages.map((msg) => {
+          return (
+            <p className={`chat_message ${msg.received && " chat_reciever"}`}>
+              <span className="chat_name">{msg.name}</span>
+              {msg.message}
+              <span className="chat_timestamp">{msg.timestamp}</span>
+            </p>
+          );
+        })}
       </div>
 
       <div className="chat_footer">
